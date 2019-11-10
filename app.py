@@ -144,5 +144,9 @@ def getimagemap(picname):
     dir_path = os.path.join(current_path, 'pic', 'pic1')
     return send_from_directory(dir_path, picname)
 
+@app.route('/')
+def index():
+    return 'Hello world'
+
 if __name__ == "__main__":
     app.run(port=8000)
